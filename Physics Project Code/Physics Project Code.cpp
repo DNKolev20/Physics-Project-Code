@@ -1,8 +1,11 @@
 #include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <cstring>
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
+	int number;
 }
