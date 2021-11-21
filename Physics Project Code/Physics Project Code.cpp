@@ -7,5 +7,7 @@ using namespace std;
 
 int main()
 {
-	int number;
+	int number1;
+	int number2;
+	int number3;
 }
