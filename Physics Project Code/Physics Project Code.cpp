@@ -144,7 +144,127 @@ float freeFallingTime(float V)
 
 int main()
 {
-	int number1;
-	int number2;
-	int number3;
+    int FormulaNumber;
+    int InputChecker = 0;
+    char FormulaLetter;
+    float time;
+    float speed;
+
+    cout << "Select the formulas that you want to see and use by typing the number corresponding to it: " << endl;
+    cout << endl;
+    cout << "1. Free Falling (Shows all the formulas connected to free falling)" << endl;
+    cout << "2. Equal Acceleration (Shows all the formulas connected to equal acceleration) " << endl;
+    cout << "3. Weight Calculator (Shows how much you weight on other planets)" << endl;
+    cout << endl;
+
+    cin >> FormulaNumber;
+    cout << endl;
+
+    if (FormulaNumber != 1 && FormulaNumber != 2 && FormulaNumber != 3)
+    {
+        for (int i = 1; i > InputChecker; i++)
+        {
+            cout << "Incorrect Input! Try again: ";
+            cin >> FormulaNumber;
+
+            if (FormulaNumber == 1 || FormulaNumber == 2 || FormulaNumber == 3)
+            {
+                cout << endl;
+                cout << "Correct Input!" << endl;
+                InputChecker = i + 1;
+                cout << endl;
+            }
+        }
+    }
+    
+    InputChecker = 0;
+	
+	
+
+    if (FormulaNumber == 1)
+    {
+        cout << "1. S = (g * t * t) / 2" << endl;
+        cout << "2. V = g * t" << endl;
+        cout << "3. t = V / g" << endl;
+        cout << endl;
+
+        cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
+        cout << endl;
+
+        cin >> FormulaLetter;
+        cout << endl;
+
+        if (FormulaLetter != 'S' && FormulaLetter != 'V' && FormulaLetter != 't')
+        {
+            for(int i = 1; i > InputChecker; i++)
+            {
+                cout << "Incorrect Input! Try again: ";
+                cin >> FormulaLetter;
+
+                if (FormulaLetter == 'S' || FormulaLetter == 'V' || FormulaLetter == 't')
+                {
+                    cout << endl;
+                    cout << "Correct Input!" << endl;
+                    InputChecker = i + 1;
+                    cout << endl;
+                }
+            }
+        }
+	
+	    
+	    
+        if (FormulaLetter == 'S')
+        {
+            cout << "Enter the values for: " << endl;
+
+            cout << "t (in seconds) = ";
+            cin >> time;
+            cout << "g = 9.8 m/s2" << endl;
+            cout << endl;
+
+            cout << "S = (g * t * t) / 2" << endl;  
+            cout << "S = " << freeFallingPath(time) << " m";
+        }
+	    
+	    
+
+        if (FormulaLetter == 'V')
+        {
+            cout << "Enter the values for: " << endl;
+
+            cout << "t (in seconds) = ";
+            cin >> time;
+            cout << "g = 9.8 m/s2" << endl;
+            cout << endl;
+
+            cout << "V = g * t" << endl;
+            cout << "V = " << freeFalling(time) << " m/s";
+        }
+	    
+	    
+
+        if (FormulaLetter == 't')
+        {
+            cout << "Enter the values for: " << endl;
+
+            cout << "V (in m/s) = ";
+            cin >> speed;
+            cout << "g = 9.8 m/s2" << endl;
+            cout << endl;
+
+            cout << "t = V / g" << endl;
+            cout << "t = " << freeFallingTime(speed) << " s";
+        }
+	    
+	    
+	    
+    }
+    else if (FormulaNumber == 2)
+    {
+        return 0;
+    }
+    else if (FormulaNumber == 3)
+    {
+        return 0;
+    }
 }
