@@ -46,8 +46,26 @@ float weightOnOtherPlanets(float weightOnEarth, int planet)
     }
 }
 
+// Function to find distance of the path a vehicle has passed
+double pathDistance(int Vo, int a, int t)
+{
+    return Vo * t - (a * pow(t, 2) / 2);
+    // Returns the value
+}
 
+// Function to find the time needed for a vehicle to stop
+double timeForBraking(double Vo, double a) 
+{
+    return Vo / a;
+    // Returns the value
+}
 
+// Function to find the distance needed for a vehicle to stop
+double stoppingDistance(int Vo, int a) 
+{
+    return pow(Vo, 2) / (2 * a);
+    // Returns the value
+}
 
 // Function that finds the speed using the equal acceleration formula
 int equalAccelerationSpeed(int Vo, int a, int t)
