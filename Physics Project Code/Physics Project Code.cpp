@@ -332,15 +332,17 @@ int main()
     int InputChecker = 0;
 
     char FormulaLetter;
+    char FinalAnswer;
 
     float ConvertNumber2;
     float time;
     float speed;
 
+    cout << endl;
     cout << "Select the formulas that you want to see or use by typing the number corresponding to it: " << endl;
     cout << endl;
     cout << "1. Free Falling (Shows all the formulas related to free falling)" << endl;
-    cout << "2. Free Falling In Other Plantes (Shows all the formulas related to free falling for different planets)" << endl;
+    cout << "2. Free Falling On Other Plantes (Shows all the formulas related to free falling for different planets)" << endl;
     cout << "3. Weight Calculator (Shows how much you weight on other planets)" << endl;
     cout << "4. Equal Acceleration (Shows all the formulas related to equal acceleration) " << endl;
     cout << "5. Convert Units (Converts different elements)" << endl;
@@ -1223,5 +1225,22 @@ int main()
 
             cout << ConvertNumber2 << " km = " << ConvertKilometersToMeters(ConvertNumber2) << " m";
         }
+    }
+
+    cout << endl;
+    cout << endl;
+    cout << "Try again? (Select by typing 'Y' for yes and 'N' for no): " << endl;
+    cin >> FinalAnswer;
+
+    if (FinalAnswer == 'Y')
+    {
+        main();
+    }
+    else if (FinalAnswer == 'N')
+    {
+        cout << endl;
+        cout << "Goodbye!";
+        cout << endl;
+        return 0;
     }
 }
