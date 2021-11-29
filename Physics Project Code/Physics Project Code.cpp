@@ -10,34 +10,34 @@ float weightOnOtherPlanets(float weightOnEarth, int planet)
 {
     switch (planet)
     {
-    case 1:
+    case 10:
         return weightOnEarth * 27.01; // calculates how much you weight on the Sun
         break;
-    case 2:
+    case 1:
         return weightOnEarth * 0.38; // calculates how much you weight on Mercury
         break;
-    case 3:
+    case 2:
         return weightOnEarth * 0.91; // calculates how much you weight on Venus
         break;
-    case 4:
+    case 9:
         return weightOnEarth * 0.166; // calculates how much you weight on the Moon
         break;
-    case 5:
+    case 3:
         return weightOnEarth * 0.38; // calculates how much you weight on Mars
         break;
-    case 6:
-        return weightOnEarth * 2.34; // calculates how much you weight on Jupiiter
+    case 4:
+        return weightOnEarth * 2.34; // calculates how much you weight on Jupiter
         break;
-    case 7:
+    case 5:
         return weightOnEarth * 1.06; // calculates how much you weight on Saturn
         break;
-    case 8:
+    case 6:
         return weightOnEarth * 0.92; // calculates how much you weight on Uranus
         break;
-    case 9:
+    case 7:
         return weightOnEarth * 1.19; // calculates how much you weight on Neptune
         break;
-    case 10:
+    case 8:
         return weightOnEarth * 0.06; // calculates how much you weight on Pluto
         break;
     default:
@@ -288,14 +288,52 @@ float freeFallingTimePluto(float V)
 
 
 
+float ConvertSecondsToMinutes(float cnumber)
+{
+    return cnumber / 60;
+    // Returns the value
+}
+float ConvertMinutesToSeconds(float cnumber)
+{
+    return cnumber * 60;
+    // Returns the value
+}
+float ConvertMsToKmH(float cnumber)
+{
+    return cnumber * 3.6;
+    // Returns the value
+}
+float ConvertKmhToMs(float cnumber)
+{
+    return cnumber / 3.6;
+    // Returns the value
+}
+float ConvertMetersToKilometers(float cnumber)
+{
+    return cnumber / 1000;
+    // Returns the value
+}
+float ConvertKilometersToMeters(float cnumber)
+{
+    return cnumber * 1000;
+    // Returns the value
+}
+
+
+
 
 
 int main()
 {
     int FormulaNumber;
     int PlanetNumber;
+    int ConvertNumber;
+    int Weight;
     int InputChecker = 0;
+
     char FormulaLetter;
+
+    float ConvertNumber2;
     float time;
     float speed;
 
@@ -399,6 +437,8 @@ int main()
             cout << "t = " << freeFallingTime(speed) << " s";
         }
     }
+
+
 
 
 
@@ -1012,16 +1052,176 @@ int main()
         }
 
     }
+
+
+
+
+
     else if (FormulaNumber == 3)
     {
-        return 0;
+        cout << "Select a planet/star by typing its corresponding number: " << endl;
+        cout << "1. Mercury" << endl;
+        cout << "2. Venus" << endl;
+        cout << "3. Mars" << endl;
+        cout << "4. Jupiter" << endl;
+        cout << "5. Saturn" << endl;
+        cout << "6. Uranus" << endl;
+        cout << "7. Neptune" << endl;
+        cout << "8. Pluto" << endl;
+        cout << "9. The Moon" << endl;
+        cout << "10. The Sun" << endl;
+        cout << endl;
+
+        cin >> PlanetNumber;
+        cout << endl;
+
+        if (PlanetNumber != 1 && PlanetNumber != 2 && PlanetNumber != 3 && PlanetNumber != 4 && PlanetNumber != 5 && PlanetNumber != 6 && PlanetNumber != 7 && PlanetNumber != 8 && PlanetNumber != 9 && PlanetNumber != 10)
+        {
+            for (int i = 1; i > InputChecker; i++)
+            {
+                cout << "Incorrect Input! Try again: ";
+                cin >> FormulaLetter;
+
+                if (PlanetNumber == 1 || PlanetNumber == 2 || PlanetNumber == 3 || PlanetNumber == 4 || PlanetNumber == 5 || PlanetNumber == 6 || PlanetNumber == 7 || PlanetNumber == 8 || PlanetNumber == 9 || PlanetNumber == 10)
+                {
+                    cout << endl;
+                    cout << "Correct Input!" << endl;
+                    InputChecker = i + 1;
+                    cout << endl;
+                }
+            }
+        }
+
+        cout << "Enter your weight (in kg): ";
+        cin >> Weight;
+
+        if (PlanetNumber == 1)
+        {
+            cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
+        }
+        else if (PlanetNumber == 2)
+        {
+            cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
+        }
+        else if (PlanetNumber == 3)
+        {
+            cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
+        }
+        else if (PlanetNumber == 4)
+        {
+            cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
+        }
+        else if (PlanetNumber == 5)
+        {
+            cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
+        }
+        else if (PlanetNumber == 6)
+        {
+            cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
+        }
+        else if (PlanetNumber == 7)
+        {
+            cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
+        }
+        else if (PlanetNumber == 8)
+        {
+            cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
+        }
+        else if (PlanetNumber == 9)
+        {
+            cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
+        }
+        else if (PlanetNumber == 10)
+        {
+            cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
+        }
     }
+
+
+
+
+
     else if (FormulaNumber == 4)
     {
         return 0;
     }
+
+
+
+
+
     else if (FormulaNumber == 5)
     {
-        return 0;
+        cout << "Select an option by typing its corresponding number: " << endl;
+        cout << "1. Turn seconds to minutes" << endl;
+        cout << "2. Turn minutes to seconds" << endl;
+        cout << "3. Turn m/s to km/h" << endl;
+        cout << "4. Turn km/h to m/s" << endl;
+        cout << "5. Turn meters to kilometers" << endl;
+        cout << "6. Convert kilometers to meters" << endl;
+        cout << endl;
+
+        cin >> ConvertNumber;
+        cout << endl;
+
+        if (ConvertNumber != 1 && ConvertNumber != 2 && ConvertNumber != 3 && ConvertNumber != 4 && ConvertNumber != 5 && ConvertNumber != 6)
+        {
+            for (int i = 1; i > InputChecker; i++)
+            {
+                cout << "Incorrect Input! Try again: ";
+                cin >> FormulaLetter;
+
+                if (ConvertNumber == 1 || ConvertNumber == 2 || ConvertNumber == 3 || ConvertNumber == 4 || ConvertNumber == 5 || ConvertNumber == 6)
+                {
+                    cout << endl;
+                    cout << "Correct Input!" << endl;
+                    InputChecker = i + 1;
+                    cout << endl;
+                }
+            }
+        }
+
+        if (ConvertNumber == 1)
+        {
+            cout << "Seconds = ";
+            cin >> ConvertNumber2;
+
+            cout << ConvertNumber2 << " seconds = " << ConvertSecondsToMinutes(ConvertNumber2) << " minutes";
+        }
+        if (ConvertNumber == 2)
+        {
+            cout << "Minutes = ";
+            cin >> ConvertNumber2;
+
+            cout << ConvertNumber2 << " minutes = " << ConvertMinutesToSeconds(ConvertNumber2) << " seconds";
+        }
+        if (ConvertNumber == 3)
+        {
+            cout << "m/s = ";
+            cin >> ConvertNumber2;
+
+            cout << ConvertNumber2 << " m/s = " << ConvertMsToKmH(ConvertNumber2) << " km/h";
+        }
+        if (ConvertNumber == 4)
+        {
+            cout << "km/h = ";
+            cin >> ConvertNumber2;
+
+            cout << ConvertNumber2 << " km/h = " << ConvertKmhToMs(ConvertNumber2) << " m/s";
+        }
+        if (ConvertNumber == 5)
+        {
+            cout << "Meters = ";
+            cin >> ConvertNumber2;
+
+            cout << ConvertNumber2 << " m = " << ConvertMetersToKilometers(ConvertNumber2) << " km";
+        }
+        if (ConvertNumber == 6)
+        {
+            cout << "Kilometers = ";
+            cin >> ConvertNumber2;
+
+            cout << ConvertNumber2 << " km = " << ConvertKilometersToMeters(ConvertNumber2) << " m";
+        }
     }
 }
