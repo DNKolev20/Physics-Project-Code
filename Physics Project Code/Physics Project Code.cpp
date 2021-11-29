@@ -46,68 +46,32 @@ float weightOnOtherPlanets(float weightOnEarth, int planet)
     }
 }
 
-// Function to find distance of the path a vehicle has passed
-double pathDistance(int Vo, int a, int t)
+float SpeedEqualIncrease(int Vo, int a, int t)
 {
-    return Vo * t - (a * pow(t, 2) / 2);
-    // Returns the value
+    return Vo + a * t;
+}
+float PathEqualIncrease(int Vo, int a, int t)
+{
+    return Vo * t + ((a * t * t) / 2);
 }
 
-// Function to find the time needed for a vehicle to stop
-double timeForBraking(double Vo, double a)
+
+
+float SpeedEqualDecrease(int Vo, int a, int t)
+{
+    return Vo - a * t;
+}
+float PathEqualDecrease(int Vo, int a, int t)
+{
+    return Vo * t - ((a * t * t) / 2);
+}
+float StopDistance(int Vo, int a)
 {
     return Vo / a;
-    // Returns the value
 }
-
-// Function to find the distance needed for a vehicle to stop
-double stoppingDistance(int Vo, int a)
+float StoppingPath(int Vo, int a)
 {
-    return pow(Vo, 2) / (2 * a);
-    // Returns the value
-}
-
-// Function that finds the speed using the equal acceleration formula
-int equalAccelerationSpeed(int Vo, int a, int t)
-{
-
-    return Vo + a * t;
-    // Returns the value
-}
-
-
-// Function that finds the starting speed using the equal acceleration formula
-int equalAccelerationStartingSpeed(int V, int a, int t)
-{
-
-    return V - a * t;
-    // Returns the value
-}
-
-
-// Function that finds the acceleration using the equal acceleration formula
-int equalAccelerationAcceleration(int V, int Vo, int t)
-{
-
-    return (V - Vo) / t;
-    // Returns the value
-}
-
-
-// Function that finds the time using the equal acceleration formula
-int equalAccelerationTime(int V, int Vo, int a)
-{
-
-    return (V - Vo) / a;
-    // Returns the value
-}
-
-
-// Function that finds the path length using the equal acceleration path formula
-int equalAccelerationPath(int Vo, int a, int t)
-{
-    return Vo * t + (a * t * t) / 2;
-    // Returns the value
+    return (Vo * Vo) / (2 * a);
 }
 
 
@@ -326,12 +290,16 @@ float ConvertKilometersToMeters(float cnumber)
 int main()
 {
     int FormulaNumber;
+    int FormulaNumber2;
     int PlanetNumber;
     int ConvertNumber;
     int Weight;
     int InputChecker = 0;
+    int startingSpeed;
+    int acceleration;
 
     char FormulaLetter;
+    char FormulaLetter2;
     char FinalAnswer;
 
     float ConvertNumber2;
@@ -385,7 +353,7 @@ int main()
 
         if (FormulaLetter != 'S' && FormulaLetter != 'V' && FormulaLetter != 't')
         {
-            for(int i = 1; i > InputChecker; i++)
+            for (int i = 1; i > InputChecker; i++)
             {
                 cout << "Incorrect Input! Try again: ";
                 cin >> FormulaLetter;
@@ -409,7 +377,7 @@ int main()
             cout << "g = 9.8 m/s2" << endl;
             cout << endl;
 
-            cout << "S = (g * t * t) / 2" << endl;  
+            cout << "S = (g * t * t) / 2" << endl;
             cout << "S = " << freeFallingPath(time) << " m";
         }
 
@@ -1145,135 +1113,207 @@ int main()
 
     else if (FormulaNumber == 4)
     {
-                cout << "Select wich formulas you want to use by typing its corresponding number: " << endl;
-        cout << "1. Increasing speed" << endl;
-        cout << "2. Decreasing speed" << endl;
+        cout << "Select wich formulas you want to use by typing its corresponding number: " << endl;
+        cout << "1. Increasing Speed" << endl;
+        cout << "2. Decreasing Speed" << endl;
+        cout << endl;
+
         cin >> FormulaNumber;
+        cout << endl;
+
         if (FormulaNumber == 1)
         {
-            
-            FormulaNumber = 0;
-            formulaSelection:
-            cout << "Select a formula: " << endl;
-            cout << "1. V = Vo + at" << endl;
-            cout << "2. S =  Vo * t + (a * t * t) / 2" << endl;
-            cin >> FormulaNumber;
-            if (FormulaNumber == 1)
-            {
-                FormulaNumber = 0;
-                cout << "Select what are you searching: " << endl;
-                cout << "1. V" << endl;
-                cout << "2. Vo" << endl;
-                cout << "3. a" << endl;
-                cout << "4. t" << endl;
-                cin >> FormulaNumber;
-                if (FormulaNumber == 1)
-                {
-                    cout << "Please write the variables" << endl;
-                    cout << "Vo = ";
-                    cin >> startingSpeed;
-                    cout << endl;
-                    cout << "a = ";
-                    cin >> acceleration;
-                    cout << endl;
-                    cout << "t = ";
-                    cout << endl;
-                    cin >> time;
-                    cout << "V = " << equalAccelerationSpeed(startingSpeed, acceleration, time);
-                  
-                }
-                else if (FormulaNumber == 2)
-                {
-                    startingSpeedFunction:
-                    cout << "Please write the variables" << endl;
-                    cout << "V = ";
-                    
-                    cin >> speed;
-                    cout << endl;
-                    cout << "a = ";
-                    cin >> acceleration;
-                    cout << endl;
-                    cout << "t = ";
-                    cin >> time;
-                    cout << endl;
-                    cout << "Vo = " << equalAccelerationStartingSpeed(speed, acceleration, time) << endl;
-                }
-                else if (FormulaNumber == 3)
-                {
-                    accelerationFunction:
-                    cout << "Please write the variables" << endl;
-                    cout << "V = ";
-                    cin >> speed;
-                    cout << endl;
-                    cout << "Vo = ";
-                    cin >> startingSpeed;
-                    cout << endl;
-                    cout << "t = ";
-                    cin >> time;
-                    cout << endl;
-                    cout << "a = " << equalAccelerationAcceleration(speed, startingSpeed, time) << endl;
-                }
-                else if (FormulaNumber == 4)
-                {
-                    timeFunction:
-                    cout << "Please write the variables" << endl;
-                    cout << "V = ";
+            cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
+            cout << endl;
+            cout << "1. V = Vo + a * t" << endl;
+            cout << "2. S = Vo * t + (a * t * t) / 2" << endl;
+            cout << endl;
+            cin >> FormulaLetter;
+            cout << endl;
 
-                    cin >> speed;
-                    cout << endl;
-                    cout << "Vo = ";
-                    cin >> startingSpeed;
-                    cout << endl;
-                    cout << "a = ";
-                    cin >> acceleration;
-                    cout << endl;
-                    cout << "t = " << equalAccelerationTime(speed, startingSpeed, acceleration) << endl;
-                }
-                else
+            if (FormulaLetter != 'V' && FormulaLetter != 'S')
+            {
+                for (int i = 1; i > InputChecker; i++)
                 {
-                    cout << "Incorect input" << endl;
-                    goto formulaSelection;
+                    cout << "Incorrect Input! Try again: ";
+                    cin >> FormulaLetter;
+
+                    if (FormulaLetter == 'S' || FormulaLetter == 'V')
+                    {
+                        cout << endl;
+                        cout << "Correct Input!" << endl;
+                        InputChecker = i + 1;
+                        cout << endl;
+                    }
                 }
             }
-            else if (FormulaNumber == 2)
-            {
-                cout << "Select what are you searching: " << endl;
-                cout << "1. S" << endl;
-                cout << "2. Vo" << endl;
-                cout << "3. a" << endl;
-                cout << "4. t" << endl;
-                cin >> FormulaNumber;
-                if (FormulaNumber == 1)
-                {
-                    cout << "Vo = ";
-                    cin >> startingSpeed;
-                    cout << endl;
-                    cout << "a = ";
-                    cin >> acceleration;
-                    cout << endl;
-                    cout << "t = ";
-                    cin >> time;
-                    cout << endl;
-                    cout << "S = " << equalAccelerationPath(startingSpeed, acceleration, time) << endl;
 
-                }
-                else if (FormulaNumber == 2)
+            if (FormulaLetter == 'V')
+            {
+                cout << "Enter the values for: " << endl;
+
+                cout << "Vo (in m/s) = ";
+                cin >> startingSpeed;
+                
+                cout << "a (int m/s2) = ";
+                cin >> acceleration;
+
+                cout << "t (int seconds) = ";
+                cin >> time;
+
+                cout << endl;
+
+                cout << "V = Vo + a * t" << endl;
+                cout << "V = " << SpeedEqualIncrease(startingSpeed, acceleration, time) << " m/s";
+            }
+
+            else if (FormulaLetter == 'S')
+            {
+                cout << "Enter the values for: " << endl;
+
+                cout << "Vo (in m/s) = ";
+                cin >> startingSpeed;
+
+                cout << "a (int m/s2) = ";
+                cin >> acceleration;
+
+                cout << "t (int seconds) = ";
+                cin >> time;
+
+                cout << endl;
+
+                cout << "S = Vo * t + (a * t * t) / 2" << endl;
+                cout << "S = " << PathEqualIncrease(startingSpeed, acceleration, time) << " m";
+            }
+        }
+
+
+
+        else if (FormulaNumber == 2)
+        {
+            cout << "Which formula do you want to use? (Select by typing ONLY the letter of the element that you are looking for): " << endl;
+            cout << endl;
+            cout << "1. V = Vo - a * t" << endl;
+            cout << "2. S = Vo * t - (a * t * t) / 2" << endl;
+            cout << "3. S = (Vo * Vo) / (2 * a)" << endl;
+            cout << "4. t0 = Vo / a" << endl;
+            cout << endl;
+            cin >> FormulaLetter;
+            cout << endl;
+
+            if (FormulaLetter != 'V' && FormulaLetter != 'S' && FormulaLetter != 't')
+            {
+                for (int i = 1; i > InputChecker; i++)
                 {
-                    goto startingSpeedFunction;
+                    cout << "Incorrect Input! Try again: ";
+                    cin >> FormulaLetter;
+
+                    if (FormulaLetter == 'S' || FormulaLetter == 'V' || FormulaLetter == 't')
+                    {
+                        cout << endl;
+                        cout << "Correct Input!" << endl;
+                        InputChecker = i + 1;
+                        cout << endl;
+                    }
                 }
-                else if (FormulaNumber == 3)
+            }
+
+            if (FormulaLetter == 'V')
+            {
+                cout << "Enter the values for: " << endl;
+
+                cout << "Vo (in m/s) = ";
+                cin >> startingSpeed;
+
+                cout << "a (int m/s2) = ";
+                cin >> acceleration;
+
+                cout << "t (int seconds) = ";
+                cin >> time;
+
+                cout << endl;
+
+                cout << "V = Vo - a * t" << endl;
+                cout << "V = " << SpeedEqualDecrease(startingSpeed, acceleration, time) << " m/s";
+            }
+
+            else if (FormulaLetter == 'S')
+            {
+                cout << "Select the formula by typing its corresponding number: " << endl;
+                cout << "1. S = Vo * t - (a * t * t) / 2" << endl;
+                cout << "2. S = (Vo * Vo) / (2 * a)" << endl;
+                cout << endl;
+
+                cin >> FormulaNumber2;
+                cout << endl;
+
+                if (FormulaNumber2 != 1 && FormulaNumber2 != 2)
                 {
-                    goto accelerationFunction;
+                    for (int i = 1; i > InputChecker; i++)
+                    {
+                        cout << "Incorrect Input! Try again: ";
+                        cin >> FormulaLetter;
+
+                        if (FormulaNumber2 == 1 || FormulaNumber2 == 2)
+                        {
+                            cout << endl;
+                            cout << "Correct Input!" << endl;
+                            InputChecker = i + 1;
+                            cout << endl;
+                        }
+                    }
                 }
-                else if (FormulaNumber == 4)
+
+                if (FormulaNumber2 == 1)
                 {
-                    goto timeFunction;
+                    cout << "Enter the values for: " << endl;
+
+                    cout << "Vo (in m/s) = ";
+                    cin >> startingSpeed;
+
+                    cout << "a (in m/s2) = ";
+                    cin >> acceleration;
+
+                    cout << "t (in seconds) = ";
+                    cin >> time;
+
+                    cout << endl;
+
+                    cout << "S = Vo * t - (a * t * t) / 2" << endl;
+                    cout << "S = " << PathEqualDecrease(startingSpeed, acceleration, time) << " m";
                 }
-                else
+
+                if (FormulaNumber2 == 2)
                 {
-                    cout << "Incorect input" << endl;
-                    goto formulaSelection;
+                    cout << "Enter the values for: " << endl;
+
+                    cout << "Vo (in m/s) = ";
+                    cin >> startingSpeed;
+
+                    cout << "a (in m/s2) = ";
+                    cin >> acceleration;
+
+                    cout << endl;
+
+                    cout << "S = (Vo * Vo) / (2 * a)" << endl;
+                    cout << "S = " << StoppingPath(startingSpeed, acceleration) << " m";
                 }
+            }
+
+            else if (FormulaLetter == 't')
+            {
+                cout << "Enter the values for: " << endl;
+
+                cout << "Vo (in m/s) = ";
+                cin >> startingSpeed;
+
+                cout << "a (int m/s2) = ";
+                cin >> acceleration;
+
+                cout << endl;
+
+                cout << "t0 = Vo / a" << endl;
+                cout << "t0 = " << StopDistance(startingSpeed, acceleration) << " s";
             }
         }
 
