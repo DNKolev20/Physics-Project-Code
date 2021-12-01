@@ -409,9 +409,9 @@ int main()
 
     if (FormulaNumber == 1)
     {
-        cout << "1. S = (g * t * t) / 2" << endl;
-        cout << "2. V = g * t" << endl;
-        cout << "3. t = V / g" << endl;
+        cout << "S = (g * t * t) / 2" << endl;
+        cout << "V = g * t" << endl;
+        cout << "t = V / g" << endl;
         cout << endl;
 
         cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
@@ -518,9 +518,9 @@ int main()
 
         if (PlanetNumber == 1)
         {
-            cout << "1. S = (g * t * t) / 2" << endl;
-            cout << "2. V = g * t" << endl;
-            cout << "3. t = V / g" << endl;
+            cout << "S = (g * t * t) / 2" << endl;
+            cout << "V = g * t" << endl;
+            cout << "t = V / g" << endl;
             cout << endl;
 
             cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
@@ -590,9 +590,9 @@ int main()
 
         else if (PlanetNumber == 2)
         {
-            cout << "1. S = (g * t * t) / 2" << endl;
-            cout << "2. V = g * t" << endl;
-            cout << "3. t = V / g" << endl;
+            cout << "S = (g * t * t) / 2" << endl;
+            cout << "V = g * t" << endl;
+            cout << "t = V / g" << endl;
             cout << endl;
 
             cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
@@ -662,9 +662,9 @@ int main()
 
         else if (PlanetNumber == 3)
         {
-            cout << "1. S = (g * t * t) / 2" << endl;
-            cout << "2. V = g * t" << endl;
-            cout << "3. t = V / g" << endl;
+            cout << "S = (g * t * t) / 2" << endl;
+            cout << "V = g * t" << endl;
+            cout << "t = V / g" << endl;
             cout << endl;
 
             cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
@@ -734,9 +734,9 @@ int main()
 
         else if (PlanetNumber == 4)
         {
-            cout << "1. S = (g * t * t) / 2" << endl;
-            cout << "2. V = g * t" << endl;
-            cout << "3. t = V / g" << endl;
+            cout << "S = (g * t * t) / 2" << endl;
+            cout << "V = g * t" << endl;
+            cout << "t = V / g" << endl;
             cout << endl;
 
             cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
@@ -806,9 +806,9 @@ int main()
 
         else if (PlanetNumber == 5)
         {
-            cout << "1. S = (g * t * t) / 2" << endl;
-            cout << "2. V = g * t" << endl;
-            cout << "3. t = V / g" << endl;
+            cout << "S = (g * t * t) / 2" << endl;
+            cout << "V = g * t" << endl;
+            cout << "t = V / g" << endl;
             cout << endl;
 
             cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
@@ -878,9 +878,9 @@ int main()
 
         else if (PlanetNumber == 6)
         {
-            cout << "1. S = (g * t * t) / 2" << endl;
-            cout << "2. V = g * t" << endl;
-            cout << "3. t = V / g" << endl;
+            cout << "S = (g * t * t) / 2" << endl;
+            cout << "V = g * t" << endl;
+            cout << "t = V / g" << endl;
             cout << endl;
 
             cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
@@ -950,9 +950,9 @@ int main()
 
         else if (PlanetNumber == 7)
         {
-            cout << "1. S = (g * t * t) / 2" << endl;
-            cout << "2. V = g * t" << endl;
-            cout << "3. t = V / g" << endl;
+            cout << "S = (g * t * t) / 2" << endl;
+            cout << "V = g * t" << endl;
+            cout << "t = V / g" << endl;
             cout << endl;
 
             cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
@@ -1022,9 +1022,9 @@ int main()
 
         else if (PlanetNumber == 8)
         {
-            cout << "1. S = (g * t * t) / 2" << endl;
-            cout << "2. V = g * t" << endl;
-            cout << "3. t = V / g" << endl;
+            cout << "S = (g * t * t) / 2" << endl;
+            cout << "V = g * t" << endl;
+            cout << "t = V / g" << endl;
             cout << endl;
 
             cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
@@ -1194,8 +1194,8 @@ int main()
         {
             cout << "Which formula do you want to use? (Select by typing the letter of the element that you are looking for): " << endl;
             cout << endl;
-            cout << "1. V = Vo + a * t" << endl;
-            cout << "2. S = Vo * t + (a * t * t) / 2" << endl;
+            cout << "V = Vo + a * t" << endl;
+            cout << "S = Vo * t + (a * t * t) / 2" << endl;
             cout << endl;
             cin >> FormulaLetter;
             cout << endl;
@@ -1262,10 +1262,10 @@ int main()
         {
             cout << "Which formula do you want to use? (Select by typing ONLY the letter of the element that you are looking for): " << endl;
             cout << endl;
-            cout << "1. V = Vo - a * t" << endl;
-            cout << "2. S = Vo * t - (a * t * t) / 2" << endl;
-            cout << "3. S = (Vo * Vo) / (2 * a)" << endl;
-            cout << "4. t0 = Vo / a" << endl;
+            cout << "V = Vo - a * t" << endl;
+            cout << "S = Vo * t - (a * t * t) / 2" << endl;
+            cout << "S = (Vo * Vo) / (2 * a)" << endl;
+            cout << "t0 = Vo / a" << endl;
             cout << endl;
             cin >> FormulaLetter;
             cout << endl;
