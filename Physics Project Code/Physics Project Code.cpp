@@ -46,34 +46,44 @@ float weightOnOtherPlanets(float weightOnEarth, int planet)
     }
 }
 
-float SpeedEqualIncrease(int Vo, int a, int t)
+// Function that calculates how much a person weights on other planets
+float speedEqualIncrease(int Vo, int a, int t)
 {
     return Vo + a * t;
 }
-float PathEqualIncrease(int Vo, int a, int t)
+
+// Function that calculates the distance from the moment of accelerating to the final speed
+float pathEqualIncrease(int Vo, int a, int t)
 {
     return Vo * t + ((a * t * t) / 2);
 }
 
 
 
-float SpeedEqualDecrease(int Vo, int a, int t)
+
+// Function that calculates the final speed of a vehicle with a larger starting speed
+float speedEqualDecrease(int Vo, int a, int t)
 {
     return Vo - a * t;
 }
-float PathEqualDecrease(int Vo, int a, int t)
+
+// Function that calculates the distance from the moment of accelerating to the final speed
+float pathEqualDecrease(int Vo, int a, int t)
 {
     return Vo * t - ((a * t * t) / 2);
 }
-float StopDistance(int Vo, int a)
+
+// Function that calculates the time needed for a vehicle to stop
+float stopTime(int Vo, int a)
 {
     return Vo / a;
 }
-float StoppingPath(int Vo, int a)
+
+// Function that calculates the stopping distance of a vehicle
+float stoppingDistance(int Vo, int a)
 {
     return (Vo * Vo) / (2 * a);
 }
-
 
 
 
@@ -85,48 +95,64 @@ float freeFallingPath(float t)
     return (g * t * t) / 2;
     // Returns the value
 }
+
+// Function that finds the path length on Mercury using the free falling formula
 float freeFallingPathMercury(float t)
 {
     float g = 3.61;
     return (g * t * t) / 2;
     // Returns the value
 }
+
+// Function that finds the path length on Venus using the free falling formula
 float freeFallingPathVenus(float t)
 {
     float g = 8.83;
     return (g * t * t) / 2;
     // Returns the value
 }
+
+// Function that finds the path length on Mars using the free falling formula
 float freeFallingPathMars(float t)
 {
     float g = 3.75;
     return (g * t * t) / 2;
     // Returns the value
 }
+
+// Function that finds the path length on Jupiter using the free falling formula
 float freeFallingPathJupiter(float t)
 {
     float g = 26.0;
     return (g * t * t) / 2;
     // Returns the value
 }
+
+// Function that finds the path length on Saturn using the free falling formula
 float freeFallingPathSaturn(float t)
 {
     float g = 11.2;
     return (g * t * t) / 2;
     // Returns the value
 }
+
+// Function that finds the path length on Uranus using the free falling formula
 float freeFallingPathUranus(float t)
 {
     float g = 10.5;
     return (g * t * t) / 2;
     // Returns the value
 }
+
+// Function that finds the path length on Neptune using the free falling formula
 float freeFallingPathNeptune(float t)
 {
     float g = 13.3;
     return (g * t * t) / 2;
     // Returns the value
 }
+
+// Function that finds the path length on Pluto using the free falling formula
 float freeFallingPathPluto(float t)
 {
     float g = 0.61;
@@ -143,48 +169,64 @@ float freeFalling(float t)
     return (g * t);
     // Returns the value
 }
+
+// Function that finds the speed on Mercury using the free falling formula
 float freeFallingMercury(float t)
 {
     float g = 3.61;
     return (g * t);
     // Returns the value
 }
+
+// Function that finds the speed on Venus using the free falling formula
 float freeFallingVenus(float t)
 {
     float g = 8.83;
     return (g * t);
     // Returns the value
 }
+
+// Function that finds the speed on Mars using the free falling formula
 float freeFallingMars(float t)
 {
     float g = 3.75;
     return (g * t);
     // Returns the value
 }
+
+// Function that finds the speed on Jupiter using the free falling formula
 float freeFallingJupiter(float t)
 {
     float g = 26.0;
     return (g * t);
     // Returns the value
 }
+
+// Function that finds the speed on Saturn using the free falling formula
 float freeFallingSaturn(float t)
 {
     float g = 11.2;
     return (g * t);
     // Returns the value
 }
+
+// Function that finds the speed on Uranus using the free falling formula
 float freeFallingUranus(float t)
 {
     float g = 10.5;
     return (g * t);
     // Returns the value
 }
+
+// Function that finds the speed on Neptune using the free falling formula
 float freeFallingNeptune(float t)
 {
     float g = 13.3;
     return (g * t);
     // Returns the value
 }
+
+// Function that finds the speed on Pluto using the free falling formula
 float freeFallingPluto(float t)
 {
     float g = 0.61;
@@ -194,55 +236,71 @@ float freeFallingPluto(float t)
 
 
 
-// Function that finds the speed using the free falling formula
+// Function that finds the time using the free falling formula
 float freeFallingTime(float V)
 {
     float g = 9.8;
     return (V / g);
     // Returns the value
 }
+
+// Function that finds the time on Mercury using the free falling formula
 float freeFallingTimeMercury(float V)
 {
     float g = 3.61;
     return (V / g);
     // Returns the value
 }
+
+// Function that finds the time on Venus using the free falling formula
 float freeFallingTimeVenus(float V)
 {
     float g = 8.83;
     return (V / g);
     // Returns the value
 }
+
+// Function that finds the time on Mars using the free falling formula
 float freeFallingTimeMars(float V)
 {
     float g = 3.75;
     return (V / g);
     // Returns the value
 }
+
+// Function that finds the time on Jupiter using the free falling formula
 float freeFallingTimeJupiter(float V)
 {
     float g = 26.0;
     return (V / g);
     // Returns the value
 }
+
+// Function that finds the time on Saturn using the free falling formula
 float freeFallingTimeSaturn(float V)
 {
     float g = 11.2;
     return (V / g);
     // Returns the value
 }
+
+// Function that finds the time on Uranus using the free falling formula
 float freeFallingTimeUranus(float V)
 {
     float g = 10.5;
     return (V / g);
     // Returns the value
 }
+
+// Function that finds the time on Neptune using the free falling formula
 float freeFallingTimeNeptune(float V)
 {
     float g = 13.3;
     return (V / g);
     // Returns the value
 }
+
+// Function that finds the time on Pluto using the free falling formula
 float freeFallingTimePluto(float V)
 {
     float g = 0.61;
@@ -252,32 +310,43 @@ float freeFallingTimePluto(float V)
 
 
 
-float ConvertSecondsToMinutes(float cnumber)
+// Function that converts seconds to minutes
+float convertSecondsToMinutes(float cnumber)
 {
     return cnumber / 60;
     // Returns the value
 }
-float ConvertMinutesToSeconds(float cnumber)
+
+// Function that converts minutes to seconds
+float convertMinutesToSeconds(float cnumber)
 {
     return cnumber * 60;
     // Returns the value
 }
-float ConvertMsToKmH(float cnumber)
+
+// Function that converts meters per second to kilometers per hour
+float convertMsToKmH(float cnumber)
 {
     return cnumber * 3.6;
     // Returns the value
 }
-float ConvertKmhToMs(float cnumber)
+
+// Function that converts kilometers per hour to meters per second
+float convertKmhToMs(float cnumber)
 {
     return cnumber / 3.6;
     // Returns the value
 }
-float ConvertMetersToKilometers(float cnumber)
+
+// Function that converts meters to kilometers
+float convertMetersToKilometers(float cnumber)
 {
     return cnumber / 1000;
     // Returns the value
 }
-float ConvertKilometersToMeters(float cnumber)
+
+// Function that converts kilometers to meters
+float convertKilometersToMeters(float cnumber)
 {
     return cnumber * 1000;
     // Returns the value
@@ -1154,7 +1223,7 @@ int main()
 
                 cout << "Vo (in m/s) = ";
                 cin >> startingSpeed;
-                
+
                 cout << "a (int m/s2) = ";
                 cin >> acceleration;
 
@@ -1164,7 +1233,7 @@ int main()
                 cout << endl;
 
                 cout << "V = Vo + a * t" << endl;
-                cout << "V = " << SpeedEqualIncrease(startingSpeed, acceleration, time) << " m/s";
+                cout << "V = " << speedEqualIncrease(startingSpeed, acceleration, time) << " m/s";
             }
 
             else if (FormulaLetter == 'S')
@@ -1183,7 +1252,7 @@ int main()
                 cout << endl;
 
                 cout << "S = Vo * t + (a * t * t) / 2" << endl;
-                cout << "S = " << PathEqualIncrease(startingSpeed, acceleration, time) << " m";
+                cout << "S = " << pathEqualIncrease(startingSpeed, acceleration, time) << " m";
             }
         }
 
@@ -1234,7 +1303,7 @@ int main()
                 cout << endl;
 
                 cout << "V = Vo - a * t" << endl;
-                cout << "V = " << SpeedEqualDecrease(startingSpeed, acceleration, time) << " m/s";
+                cout << "V = " << speedEqualDecrease(startingSpeed, acceleration, time) << " m/s";
             }
 
             else if (FormulaLetter == 'S')
@@ -1280,7 +1349,7 @@ int main()
                     cout << endl;
 
                     cout << "S = Vo * t - (a * t * t) / 2" << endl;
-                    cout << "S = " << PathEqualDecrease(startingSpeed, acceleration, time) << " m";
+                    cout << "S = " << pathEqualDecrease(startingSpeed, acceleration, time) << " m";
                 }
 
                 if (FormulaNumber2 == 2)
@@ -1296,7 +1365,7 @@ int main()
                     cout << endl;
 
                     cout << "S = (Vo * Vo) / (2 * a)" << endl;
-                    cout << "S = " << StoppingPath(startingSpeed, acceleration) << " m";
+                    cout << "S = " << stoppingDistance(startingSpeed, acceleration) << " m";
                 }
             }
 
@@ -1313,7 +1382,7 @@ int main()
                 cout << endl;
 
                 cout << "t0 = Vo / a" << endl;
-                cout << "t0 = " << StopDistance(startingSpeed, acceleration) << " s";
+                cout << "t0 = " << stopTime(startingSpeed, acceleration) << " s";
             }
         }
 
@@ -1359,42 +1428,42 @@ int main()
             cout << "Seconds = ";
             cin >> ConvertNumber2;
 
-            cout << ConvertNumber2 << " seconds = " << ConvertSecondsToMinutes(ConvertNumber2) << " minutes";
+            cout << ConvertNumber2 << " seconds = " << convertSecondsToMinutes(ConvertNumber2) << " minutes";
         }
         if (ConvertNumber == 2)
         {
             cout << "Minutes = ";
             cin >> ConvertNumber2;
 
-            cout << ConvertNumber2 << " minutes = " << ConvertMinutesToSeconds(ConvertNumber2) << " seconds";
+            cout << ConvertNumber2 << " minutes = " << convertMinutesToSeconds(ConvertNumber2) << " seconds";
         }
         if (ConvertNumber == 3)
         {
             cout << "m/s = ";
             cin >> ConvertNumber2;
 
-            cout << ConvertNumber2 << " m/s = " << ConvertMsToKmH(ConvertNumber2) << " km/h";
+            cout << ConvertNumber2 << " m/s = " << convertMsToKmH(ConvertNumber2) << " km/h";
         }
         if (ConvertNumber == 4)
         {
             cout << "km/h = ";
             cin >> ConvertNumber2;
 
-            cout << ConvertNumber2 << " km/h = " << ConvertKmhToMs(ConvertNumber2) << " m/s";
+            cout << ConvertNumber2 << " km/h = " << convertKmhToMs(ConvertNumber2) << " m/s";
         }
         if (ConvertNumber == 5)
         {
             cout << "Meters = ";
             cin >> ConvertNumber2;
 
-            cout << ConvertNumber2 << " m = " << ConvertMetersToKilometers(ConvertNumber2) << " km";
+            cout << ConvertNumber2 << " m = " << convertMetersToKilometers(ConvertNumber2) << " km";
         }
         if (ConvertNumber == 6)
         {
             cout << "Kilometers = ";
             cin >> ConvertNumber2;
 
-            cout << ConvertNumber2 << " km = " << ConvertKilometersToMeters(ConvertNumber2) << " m";
+            cout << ConvertNumber2 << " km = " << convertKilometersToMeters(ConvertNumber2) << " m";
         }
     }
 
