@@ -358,22 +358,22 @@ float convertKilometersToMeters(float cnumber)
 
 int main()
 {
-    int FormulaNumber;
-    int FormulaNumber2;
-    int PlanetNumber;
-    int ConvertNumber;
-    int Weight;
-    int InputChecker = 0;
-    int startingSpeed;
-    int acceleration;
+    int FormulaNumber; // used for choosing which formula you'll use
+    int FormulaNumber2; // used for choosing which formula you'll use
+    int PlanetNumber; // used for choosing which planet you'll use
+    int ConvertNumber; // used for converting the elements in option 5
+    int Weight; // used for formulas that use weight
+    int InputChecker = 0; // used for checking if everything is written correctly
+    int startingSpeed; // used for formulas that use a starting speed
+    int acceleration; // used for formulas that use acceleration
 
-    char FormulaLetter;
-    char FormulaLetter2;
-    char FinalAnswer;
+    char FormulaLetter; // used for choosing which formula you'll use
+    char FormulaLetter2; // used for choosing which formula you'll use 
+    char FinalAnswer; // used for staying in the program or getting out of it 
 
-    float ConvertNumber2;
-    float time;
-    float speed;
+    float ConvertNumber2; // used for converting the elements in option 5 
+    float time; // used for formulas that use time 
+    float speed; // used for formulas that use speed 
 
     cout << endl;
     cout << "Select the formulas that you want to see or use by typing the number corresponding to it: " << endl;
