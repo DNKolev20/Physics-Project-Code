@@ -11,6 +11,7 @@
 ### Used Apps, Tools and Programming Languages:
 #### 1. Microsoft Word
 #### 2. Microsoft PowerPoint
+#### 3. Microsoft Excel
 #### 3. Microsoft Teams
 #### 4. Visual Studio
 #### 5. Github
