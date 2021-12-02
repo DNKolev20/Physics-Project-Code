@@ -404,6 +404,7 @@ int main()
             }
         }
     }
+    // Checks if the input is correct or not
 
     InputChecker = 0;
 
@@ -436,6 +437,7 @@ int main()
                 }
             }
         }
+        // Checks if the input is correct or not
 
         if (FormulaLetter == 'S')
         {
@@ -448,6 +450,7 @@ int main()
 
             cout << "S = (g * t * t) / 2" << endl;
             cout << "S = " << freeFallingPath(time) << " m";
+            // using a function that finds the path
         }
 
         if (FormulaLetter == 'V')
@@ -461,6 +464,7 @@ int main()
 
             cout << "V = g * t" << endl;
             cout << "V = " << freeFalling(time) << " m/s";
+            // using a function that finds the speed
         }
 
         if (FormulaLetter == 't')
@@ -474,6 +478,7 @@ int main()
 
             cout << "t = V / g" << endl;
             cout << "t = " << freeFallingTime(speed) << " s";
+            // using a function that finds the time
         }
     }
 
@@ -513,7 +518,7 @@ int main()
                 }
             }
         }
-
+        // Checks if the input is correct or not
 
 
         if (PlanetNumber == 1)
@@ -545,6 +550,7 @@ int main()
                     }
                 }
             }
+            // Checks if the input is correct or not
 
             if (FormulaLetter == 'S')
             {
@@ -557,6 +563,7 @@ int main()
 
                 cout << "S = (g * t * t) / 2" << endl;
                 cout << "S = " << freeFallingPathMercury(time) << " m";
+                // using a function that finds the path
             }
 
             if (FormulaLetter == 'V')
@@ -570,6 +577,7 @@ int main()
 
                 cout << "V = g * t" << endl;
                 cout << "V = " << freeFallingMercury(time) << " m/s";
+                // using a function that finds the speed
             }
 
             if (FormulaLetter == 't')
@@ -583,6 +591,7 @@ int main()
 
                 cout << "t = V / g" << endl;
                 cout << "t = " << freeFallingTimeMercury(speed) << " s";
+                // using a function that finds the time
             }
         }
 
@@ -617,6 +626,7 @@ int main()
                     }
                 }
             }
+            // Checks if the input is correct or not
 
             if (FormulaLetter == 'S')
             {
@@ -629,6 +639,7 @@ int main()
 
                 cout << "S = (g * t * t) / 2" << endl;
                 cout << "S = " << freeFallingPathVenus(time) << " m";
+                // using a function that finds the path
             }
 
             if (FormulaLetter == 'V')
@@ -642,6 +653,7 @@ int main()
 
                 cout << "V = g * t" << endl;
                 cout << "V = " << freeFallingVenus(time) << " m/s";
+                // using a function that finds the speed
             }
 
             if (FormulaLetter == 't')
@@ -655,6 +667,7 @@ int main()
 
                 cout << "t = V / g" << endl;
                 cout << "t = " << freeFallingTimeVenus(speed) << " s";
+                // using a function that finds the time
             }
         }
 
@@ -689,6 +702,7 @@ int main()
                     }
                 }
             }
+            // Checks if the input is correct or not
 
             if (FormulaLetter == 'S')
             {
@@ -701,6 +715,7 @@ int main()
 
                 cout << "S = (g * t * t) / 2" << endl;
                 cout << "S = " << freeFallingPathMars(time) << " m";
+                // using a function that finds the path
             }
 
             if (FormulaLetter == 'V')
@@ -714,6 +729,7 @@ int main()
 
                 cout << "V = g * t" << endl;
                 cout << "V = " << freeFallingMars(time) << " m/s";
+                // using a function that finds the speed
             }
 
             if (FormulaLetter == 't')
@@ -727,6 +743,7 @@ int main()
 
                 cout << "t = V / g" << endl;
                 cout << "t = " << freeFallingTimeMars(speed) << " s";
+                // using a function that finds the time
             }
         }
 
@@ -761,6 +778,7 @@ int main()
                     }
                 }
             }
+            // Checks if the input is correct or not
 
             if (FormulaLetter == 'S')
             {
@@ -773,6 +791,7 @@ int main()
 
                 cout << "S = (g * t * t) / 2" << endl;
                 cout << "S = " << freeFallingPathJupiter(time) << " m";
+                // using a function that finds the path
             }
 
             if (FormulaLetter == 'V')
@@ -785,7 +804,8 @@ int main()
                 cout << endl;
 
                 cout << "V = g * t" << endl;
-                cout << "V = " << freeFallingJupiter(time) << " m/s";
+                cout << "V = " << freeFallingJupiter(time) << " m/s";\
+                // using a function that finds the speed
             }
 
             if (FormulaLetter == 't')
@@ -799,6 +819,7 @@ int main()
 
                 cout << "t = V / g" << endl;
                 cout << "t = " << freeFallingTimeJupiter(speed) << " s";
+                // using a function that finds the time
             }
         }
 
@@ -833,6 +854,7 @@ int main()
                     }
                 }
             }
+            // Checks if the input is correct or not
 
             if (FormulaLetter == 'S')
             {
@@ -845,6 +867,7 @@ int main()
 
                 cout << "S = (g * t * t) / 2" << endl;
                 cout << "S = " << freeFallingPathSaturn(time) << " m";
+                // using a function that finds the path
             }
 
             if (FormulaLetter == 'V')
@@ -858,6 +881,7 @@ int main()
 
                 cout << "V = g * t" << endl;
                 cout << "V = " << freeFallingSaturn(time) << " m/s";
+                // using a function that finds the speed
             }
 
             if (FormulaLetter == 't')
@@ -871,6 +895,7 @@ int main()
 
                 cout << "t = V / g" << endl;
                 cout << "t = " << freeFallingTimeSaturn(speed) << " s";
+                // using a function that finds the time
             }
         }
 
@@ -905,6 +930,7 @@ int main()
                     }
                 }
             }
+            // Checks if the input is correct or not
 
             if (FormulaLetter == 'S')
             {
@@ -917,6 +943,7 @@ int main()
 
                 cout << "S = (g * t * t) / 2" << endl;
                 cout << "S = " << freeFallingPathUranus(time) << " m";
+                // using a function that finds the path
             }
 
             if (FormulaLetter == 'V')
@@ -930,6 +957,7 @@ int main()
 
                 cout << "V = g * t" << endl;
                 cout << "V = " << freeFallingUranus(time) << " m/s";
+                // using a function that finds the speed
             }
 
             if (FormulaLetter == 't')
@@ -943,6 +971,7 @@ int main()
 
                 cout << "t = V / g" << endl;
                 cout << "t = " << freeFallingTimeUranus(speed) << " s";
+                // using a function that finds the time
             }
         }
 
@@ -977,6 +1006,7 @@ int main()
                     }
                 }
             }
+            // Checks if the input is correct or not
 
             if (FormulaLetter == 'S')
             {
@@ -989,6 +1019,7 @@ int main()
 
                 cout << "S = (g * t * t) / 2" << endl;
                 cout << "S = " << freeFallingPathNeptune(time) << " m";
+                // using a function that finds the path
             }
 
             if (FormulaLetter == 'V')
@@ -1002,6 +1033,7 @@ int main()
 
                 cout << "V = g * t" << endl;
                 cout << "V = " << freeFallingNeptune(time) << " m/s";
+                // using a function that finds the speed
             }
 
             if (FormulaLetter == 't')
@@ -1015,6 +1047,7 @@ int main()
 
                 cout << "t = V / g" << endl;
                 cout << "t = " << freeFallingTimeNeptune(speed) << " s";
+                // using a function that finds the time
             }
         }
 
@@ -1049,6 +1082,7 @@ int main()
                     }
                 }
             }
+            // Checks if the input is correct or not
 
             if (FormulaLetter == 'S')
             {
@@ -1061,6 +1095,7 @@ int main()
 
                 cout << "S = (g * t * t) / 2" << endl;
                 cout << "S = " << freeFallingPathPluto(time) << " m";
+                // using a function that finds the path
             }
 
             if (FormulaLetter == 'V')
@@ -1074,6 +1109,7 @@ int main()
 
                 cout << "V = g * t" << endl;
                 cout << "V = " << freeFallingPluto(time) << " m/s";
+                // using a function that finds the speed
             }
 
             if (FormulaLetter == 't')
@@ -1087,6 +1123,7 @@ int main()
 
                 cout << "t = V / g" << endl;
                 cout << "t = " << freeFallingTimePluto(speed) << " s";
+                // using a function that finds the time
             }
         }
 
@@ -1130,6 +1167,7 @@ int main()
                 }
             }
         }
+        // Checks if the input is correct or not
 
         cout << "Enter your weight (in kg): ";
         cin >> Weight;
@@ -1174,6 +1212,7 @@ int main()
         {
             cout << "You will weight: " << weightOnOtherPlanets(Weight, PlanetNumber) << " kg";
         }
+        // using functions that calculate your weight on different planets and stars
     }
 
 
@@ -1216,6 +1255,7 @@ int main()
                     }
                 }
             }
+            // Checks if the input is correct or not
 
             if (FormulaLetter == 'V')
             {
@@ -1234,6 +1274,7 @@ int main()
 
                 cout << "V = Vo + a * t" << endl;
                 cout << "V = " << speedEqualIncrease(startingSpeed, acceleration, time) << " m/s";
+                // using a function that finds the speed
             }
 
             else if (FormulaLetter == 'S')
@@ -1253,6 +1294,7 @@ int main()
 
                 cout << "S = Vo * t + (a * t * t) / 2" << endl;
                 cout << "S = " << pathEqualIncrease(startingSpeed, acceleration, time) << " m";
+                // using a function that finds the path
             }
         }
 
@@ -1286,6 +1328,7 @@ int main()
                     }
                 }
             }
+            // Checks if the input is correct or not
 
             if (FormulaLetter == 'V')
             {
@@ -1304,6 +1347,7 @@ int main()
 
                 cout << "V = Vo - a * t" << endl;
                 cout << "V = " << speedEqualDecrease(startingSpeed, acceleration, time) << " m/s";
+                // using a function that finds the speed
             }
 
             else if (FormulaLetter == 'S')
@@ -1332,6 +1376,7 @@ int main()
                         }
                     }
                 }
+                // Checks if the input is correct or not
 
                 if (FormulaNumber2 == 1)
                 {
@@ -1350,6 +1395,7 @@ int main()
 
                     cout << "S = Vo * t - (a * t * t) / 2" << endl;
                     cout << "S = " << pathEqualDecrease(startingSpeed, acceleration, time) << " m";
+                    // using a function that finds the path
                 }
 
                 if (FormulaNumber2 == 2)
@@ -1366,6 +1412,7 @@ int main()
 
                     cout << "S = (Vo * Vo) / (2 * a)" << endl;
                     cout << "S = " << stoppingDistance(startingSpeed, acceleration) << " m";
+                    // using a function that finds the path
                 }
             }
 
@@ -1383,6 +1430,7 @@ int main()
 
                 cout << "t0 = Vo / a" << endl;
                 cout << "t0 = " << stopTime(startingSpeed, acceleration) << " s";
+                // using a function that finds the time
             }
         }
 
@@ -1422,6 +1470,7 @@ int main()
                 }
             }
         }
+        // Checks if the input is correct or not
 
         if (ConvertNumber == 1)
         {
@@ -1465,6 +1514,7 @@ int main()
 
             cout << ConvertNumber2 << " km = " << convertKilometersToMeters(ConvertNumber2) << " m";
         }
+        // using a functions that converts the different units
     }
 
     cout << endl;
@@ -1483,4 +1533,5 @@ int main()
         cout << endl;
         return 0;
     }
+    // Asking if the user wants to leave the program or give it another try
 }
